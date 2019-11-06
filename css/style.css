@@ -613,6 +613,8 @@ a{
 @media (max-width:768px){
      .section  {
          margin: 20 20px;
+         padding:10px;
+         text-align:center;
      }
 }
 
@@ -749,12 +751,15 @@ i {
 
 .security-section-text{
     
-    flex: 100%;
+    flex: 80%;
 }
 
-@media (min-width:768px){
+@media (max-width:768px){
      .security-section-text {
-         flex:80%
+         flex:100%;
+         text-align:center;
+         align-items: center;
+
      }
      
 }
@@ -773,6 +778,12 @@ i {
 .security-section-btn{
     
     flex: 20%;
+}
+@media (max-width:768px){
+     .security-section-btn {
+         flex:100%;
+         margin: 30px;
+     }
 }
 
 .security-section-btn a{
@@ -846,7 +857,6 @@ i {
     
     width: auto;
     height: 25px;
-    
     -webkit-filter: grayscale(1.2);
     
 }
