@@ -1,0 +1,802 @@
+
+
+/** Border box para no contar los márgenes ni paddings. */
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+:root{
+    
+    --fuentePrimaria :'Varela Round', sans-serif;
+    
+}
+
+body{
+    
+    background-color: whitesmoke;
+    margin-bottom: 50px;
+}
+
+
+*{
+    
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--fuentePrimaria);
+}
+
+.contenedor{
+    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.centrar80{
+    
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.centrado100{
+    
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+.btn{
+    
+    background-color: rgb(53, 107, 255);
+    padding: 10px;
+    max-width: 150px;
+    border-radius: 5px;
+    
+    
+}
+
+.btn:hover{
+    
+    background-color: #2f5fe2;
+    transition: ease-in-out .3s all;
+}
+
+.btn-white{
+
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+.btn-outline{
+    
+    background-color: white;
+    color: #356bff;
+    border: 1px solid #356bff;
+    border-radius: 5px;
+}
+
+a{
+    
+    color:white
+}
+
+
+
+
+
+
+
+/* NavMenu */
+
+
+
+
+.barra-menu{
+    margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL QUE CONTIENE EL MENU */
+.menu-container {
+    
+    display: flex;
+    background-color: #24292e;
+    justify-content: space-between;
+}
+
+
+
+/* FLEX ICONO ------------------*/
+
+.flex-icono{
+    
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.flex-icono img{
+    max-width: 30px;
+    max-height:30px ;
+    margin: 10px;
+    
+    
+}
+
+
+/* --------------FIN FLEX ICONO */
+
+/* ABRIMOS CONTENEDOR DEL SEGUNDO FLEX CON UN BLOQUE */
+.block-menu{
+    
+    display: block;
+    width: 1200px;
+    padding-top: 8px ;
+    
+}
+/* FLEX DEL MENU QUE CONTIENE 2 FLEX LOS INPUTS Y LOS BOTONES  */
+.flex-menu {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MENU SELECCIÓN----------------- */
+
+.menu-seleccion{
+    
+    flex: 50%;
+    padding: 10px;
+}
+
+
+.menu-seleccion ul{
+    
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-seleccion li{
+    
+    padding: 0 5px 0 5px;
+}
+
+.menu-seleccion a{
+    
+    color: white;
+    font-size: 1rem;
+    font-family: var(--fuentePrimaria);
+    
+    
+}
+.menu-seleccion i{
+    
+    font-size: .9em;
+    color: grey;
+}
+
+.menu-seleccion a:hover{
+    
+    transition: color .2s ease-in-out;
+    color: rgba(255, 255, 255, 0.767);
+}
+.menu-seleccion a:hover i{
+    
+    color: white;
+    transition: color ease-in-out .2s;
+}
+
+/* --------------FIN MENU SELECCION */
+
+
+/* FLEX DE INPUTS DE BÚSQUEDA Y DE INICIO DE SESIÓN-------------- */
+
+
+
+.inputs-container{
+    
+    flex: 15%;
+}
+
+.inputs-signs{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* FORM del Menu */
+
+
+#form-menu{
+    
+    flex: 60%;
+}
+
+
+/* INPUT--------------------------- */
+
+
+
+.inputs-signs input{
+    
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 2px;
+    border-style: none;
+    width: 220px;
+    background-color: #484b50;
+    font-family: var(--fuentePrimaria);
+    font-size: .9em;
+    
+}
+
+.inputs-signs input:focus{
+    
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: white;
+    
+}
+
+.position-search {
+    
+    position: absolute;
+    top: 30px;
+    right: 180;
+}
+
+/* ------------------------FIN DE INPUT */
+
+/* SIGNS-------------------------------- */
+
+
+.signs{
+    
+    flex: 40%;
+    
+}
+
+.signs a{
+    
+    
+    color: white;
+    font-family: var(--fuentePrimaria);
+    padding: 8px;
+    font-size: .9rem;
+}
+
+.signs a:hover{
+    
+    transition: color ease-in-out .2s ;
+    color: rgba(255, 255, 255, 0.767);
+}
+
+/* ------------------------------FIN DE SIGNS */
+
+/* --------------------------------------FIN DE INPUTS Y DE SIGNS */
+
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* HERO-------------------------------------- */
+
+
+.hero-container{
+    
+    display: flex;
+    background-color: #2b3138;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 2;
+}
+
+.position-hero{
+    
+    
+    position: absolute;
+    z-index: 1 ;
+    background-color: transparent;
+    
+    
+    
+}
+
+
+/* HERO TEXT----------------------- */
+.hero-text{
+    
+    
+    z-index: 2;
+    flex: 50%;
+    font-family: var(--fuentePrimaria);
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    padding: 20px 0 20px 20px;
+    
+}
+.hero-text h2{
+    
+    font-size: 4rem;
+    text-align: left;
+    margin: 50px 0px 20px 120px;
+}
+
+
+.hero-text p{
+    
+    text-align: justify;
+    margin:0 100px 0 120px;
+    font-size: 1.3em;
+    color: rgb(155, 155, 155)
+}
+.hero-text a{
+    
+    text-decoration-line: underline;
+    text-decoration-color: #484b50;
+    color:white;
+}
+
+.hero-text a:hover{
+    
+    text-decoration-color: white;
+    transition: .2s all ease-in-out;
+}
+
+
+/* -------------------- FIN HERO TEXT */
+
+
+
+/* HERO FORM---------------------------- */
+.flex-hero-form{
+    
+    margin: 0 150px 0 0;
+    flex: 50%;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 450px;
+    z-index: 2;
+}
+
+
+.flex-form {
+    
+    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: var(--fuentePrimaria);
+    
+    
+    
+}
+
+.flex-form label{
+    
+    padding: 10px;
+    font-size: .9em;
+}
+
+
+
+.flex-form input{
+    
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid rgb(170, 168, 168);
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75);
+}
+
+.flex-form h3{
+    
+    font-size: .8em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+.flex-form a{
+    
+    color:blue;
+}
+
+.flex-form >input{
+    
+    background-color: rgb(60, 207, 60);
+    margin: 10px 0 10px 0;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: var(--fuentePrimaria);
+    border-radius: 5px;
+    color: white;
+    
+}
+
+.flex-form >input:hover{
+    
+    background-color: rgb(24, 172, 24);
+    cursor: pointer;
+    transition: ease-in-out .2s all;
+}
+
+
+/* ------------------- FIN HERO FORM */
+
+
+
+
+/* ------------------------------FIN DE HERO */
+
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+
+/* MAIN SECTION */
+
+
+
+.section {
+    
+    display: flex;
+    -webkit-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.54);
+    box-shadow: 0px 0px 17px -3px rgba(0,0,0,0.54);
+    margin-top: 100px;
+    border-radius: 5px;
+    padding: 50px;
+    background: white;
+    align-items: center;
+    
+    
+}
+
+
+/* SECTION TEXT----------------------------------------- */
+
+.section-text{
+    
+    flex:30%
+}
+
+.section h2{
+    
+    font-size: 2em;
+    
+}
+
+.section  p{
+    
+    color:gray;
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+/* -------------------------------------FIN DE SECTION TEXT */
+
+
+/* SECCION SERVICIOS ---------------------------------*/
+
+.section-services{
+    
+    flex: 70%;
+}
+
+
+.section-services ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.section-services li{
+    
+    flex: 33.3%;
+    
+}
+
+.section-services h3 {
+    
+    font-size: 1em;
+    margin: 0;
+}
+
+.section-services p{
+    
+    
+    margin: 10px 0 40px 0;
+    font-size: .8em;
+    color: grey;
+}
+
+.section-services a{
+    
+    padding: 20px;
+    font-size: .9em;
+    
+}
+.section-services ul li i{
+    
+    
+    font-size: .8em;
+}
+
+i {
+    
+    transition: all .3s ease-out;   
+}
+
+.btn-outline:hover i{
+    
+    
+    transform: translate(5px,0px);
+    transition: all .3s ease-in-out;
+    
+}
+
+
+/* -----------------------------FIN SECCION SERVICIOS */
+
+/* SECURITY SECTION---------------------------------- */
+
+.bgSecurityImg{
+    background-image: url(../img/advanced-security-iso-ui.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.security-section-text{
+    
+    flex: 80%;
+}
+
+.security-section-text h2{
+    margin: 5px 0 0 0;
+    color: white;
+}
+
+.security-section-text p{
+    
+    font-size: .9em;
+}
+
+
+.security-section-btn{
+    
+    flex: 20%;
+}
+
+.security-section-btn a{
+    
+    padding: 20px;
+}
+
+.security-section-btn i{
+    font-size: .8em;
+}
+
+.security-section-btn a:hover i{
+    
+    transform: translate(5px , 0);
+}
+
+/* ------------------------------FIN SECURITY SECTION */
+
+
+/* SECCION LOGOS------------------------------------- */
+
+
+.seccion-logos{
+    
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.logo-text-container{
+    
+    flex: 100%;
+    color: gray;
+    
+}
+
+
+/* LOGOS */
+
+.logo-container ul{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+.logo-container ul li{
+    
+    flex: 10%;
+    padding: 0 32px;
+    margin: 16px 10px;
+}
+
+.logo-container li img{
+    
+    width: auto;
+    height: 25px;
+    
+    -webkit-filter: grayscale(1.2);
+    
+}
+
+/* FIN DE LOGOS */
+
+
+
+/* --------------------------------FIN SECCION LOGOS */
+
+
+
+/* SECCION TEAM --------------------------------------*/
+
+.team-section{
+    
+    margin-top: 150px;
+    text-align: center;
+}
+
+.team-section h2{
+    
+    font-size: 3rem;
+    margin: 16px 0;
+}
+.team-section h3{
+    
+    color: gray;
+    font-size: 1em;
+    margin: 0;
+}
+
+.team-section p{
+    
+    color: gray;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.team-section a{
+    
+    display: inline-block;
+    padding: 20px;
+    margin-top: 30px;
+    width: 200px;
+    background-color: whitesmoke;
+    border-color: #9bb6ff;
+    
+}
+.team-section a:hover{
+    
+    border-color: #356bff;
+}
+
+.team-section i{
+    
+    font-size: .8em;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+
+/* ILLO TEAM-------------------------------- */
+
+.home-illo-team{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+    
+}
+
+.illo-team{
+    
+    flex: 60%;
+}
+
+
+.illo-text-team{
+    
+    flex: 40%;
+}
+
+.illo-text-team a{
+    
+    color:black
+}
+
+
+
+.illo-flex-text{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.summaryLink{
+    
+    border-radius: 5px;
+    padding: 24px;
+    line-height: 1.7em;
+    text-align:left;
+    transition: all .3s ease-in-out;
+}
+
+.summaryLink h3{
+    
+    margin: 0 0 4px 0;
+}
+.summaryLink p{
+    
+    margin: 0 ;
+    font-size: .9em;
+    
+    
+}
+
+.summaryLink span{
+    
+    text-decoration: underline;
+    color: #1c51e2;
+    text-decoration-color: #9bb6ff;
+}
+
+.summaryLink:hover{
+    
+    -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+
+/* -----------------------------------FIN ILLO TEAM */
+
+
+
