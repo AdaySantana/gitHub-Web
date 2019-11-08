@@ -556,7 +556,7 @@ a{
     color:blue;
 }
 
-.flex-form >input{
+.flex-form input[type=submit]{
     
     background-color: rgb(60, 207, 60);
     margin: 10px 0 10px 0;
@@ -566,6 +566,7 @@ a{
     font-family: var(--fuentePrimaria);
     border-radius: 5px;
     color: white;
+    transition: all .2s ease-in-out;
     
 }
 
